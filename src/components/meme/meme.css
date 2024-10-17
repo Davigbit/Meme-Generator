@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+.form {
+    padding-block: 30px;
+    padding-inline: 7.5%;
+    display: grid;
+    grid-template: 60px 40px / 1fr 1fr;
+    grid-gap: 15px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+}
+.form--box {
+    display: flex;
+    flex-direction: column;
+}
+.form--input {
+    height: 40px;
+    text-indent: 2%;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid black
+}
+.form--button {
+    grid-column: 1 / -1;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, rgb(0, 120, 0), rgb(0, 180, 0));
+    color: white;
+    border-radius: 5px;
+}
