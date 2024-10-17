@@ -2,19 +2,23 @@ import './meme.css'
 
 export default function Meme() {
     return (
-        <main>
+        <main className='main'>
             <form className="form">
                 <div className="form--box">
-                    <h4 className="form--title">Top text</h4>
+                    <label className="form--title" htmlFor='top-text'>Top text</label>
                     <input 
                         className="form--input"
-                        type="text"/>
+                        type="text"
+                        id="top-text"
+                        placeholder="Shut up"/>
                 </div>
                 <div className="form--box">
-                    <h4 className="form--title">Bottom text</h4>
+                    <label className="form--title" htmlFor='bottom-text'>Bottom text</label>
                     <input 
                         className="form--input"
-                        type="text"/>
+                        type="text"
+                        id="bottom-text"
+                        placeholder="and take my money"/>
                 </div>
                 <button className="form--button">
                     Get a new meme image 😂

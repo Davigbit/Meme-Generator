@@ -2,9 +2,11 @@
     margin: 0;
     box-sizing: border-box;
 }
-.form {
+.main {
     padding-block: 30px;
     padding-inline: 7.5%;
+}
+.form {
     display: grid;
     grid-template: 60px 40px / 1fr 1fr;
     grid-gap: 15px;
@@ -14,6 +16,9 @@
 .form--box {
     display: flex;
     flex-direction: column;
+}
+.form--title {
+    font-weight: bold;
 }
 .form--input {
     height: 40px;
@@ -31,4 +36,6 @@
     background: linear-gradient(90deg, rgb(0, 120, 0), rgb(0, 180, 0));
     color: white;
     border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
