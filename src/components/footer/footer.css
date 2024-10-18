@@ -1,24 +1,22 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
 }
-.navbar {
+.footer {
     display: flex;
     background: linear-gradient(90deg, rgb(0, 120, 0), rgb(0, 180, 0));
     box-sizing: border-box;
-    height: 65px;
+    height: 30px;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.25rem;
-    letter-spacing: -0.075rem;
+    font-size: 0.8rem;
+    letter-spacing: -0.05rem;
     color: white;
-    box-shadow: 0 0.5px 5px black;
+    box-shadow: 0 -0.5px 5px black;
+    position: fixed;
+    bottom: 0;
 }
-.navbar img {
-    height: 60%;
-    padding-inline: 10px;
+.footer h3 {
     align-self: center;
-}
-.navbar h2 {
-    align-self: center;
+    margin-left: 25px;
 }
