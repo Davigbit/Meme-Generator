@@ -1,18 +1,33 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './meme.css'
-import allMemesData from '../../memesData.ts'
 
 export default function Meme() {
 
-    const [allMemes, setAllMemes] = useState(allMemesData.data.memes)
+    type memeApiCall = {
+        id: string,
+        name: string,
+        url: string,
+        width: number,
+        height: number,
+        box_count: number,
+        captions: number
+    }
+
+    const [allMemes, setAllMemes] = useState<memeApiCall[] | undefined>(undefined)
     const [meme, setMeme] = useState({
         memeImage: 'http://i.imgflip.com/1bij.jpg',
         topText: 'One does not simply',
         bottomText: 'walk into Mordor'
     })
 
+    useEffect(() => {
+        fetch("https://api.imgflip.com/get_memes")
+            .then(res => res.json())
+            .then(data => setAllMemes(data.data.memes))
+    }, [])
+
     function changeMeme() {
-        setAllMemes(allMemesData.data.memes)
+        if (!allMemes) return
         setMeme({
             memeImage: allMemes[Math.floor(Math.random() * allMemes.length)].url,
             topText: 'Top',
