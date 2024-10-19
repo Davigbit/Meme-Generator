@@ -8,7 +8,7 @@ https://meme-generator-davi.netlify.app
 #### Install Node.js: 
 https://nodejs.org/en/download/prebuilt-installer
 
-#### Access the project folder using the terminal and type:
+#### Access this project cloned folder using the terminal and type:
 ```
 npm run dev
 ```
